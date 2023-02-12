@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cdd18e56a676b9341aa6ea7abfe9575b, type: 2}
+  - {fileID: 2100000, guid: 66a6129331c491f40b5699c73ea5b44a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   itemNeededID: 0
   newItemNeededID: 0
   newImageItem: {fileID: 21300000, guid: f0cef6e527ed7cf40bed84600ac8a4e8, type: 3}
-  groundMaterialStateFirts: {fileID: 2100000, guid: cdd18e56a676b9341aa6ea7abfe9575b,
+  groundMaterialStateFirts: {fileID: 2100000, guid: 66a6129331c491f40b5699c73ea5b44a,
     type: 2}
   groundMaterialStateSecond: {fileID: 2100000, guid: 8fe0eec196e04ba488c5724d1c83f448,
     type: 2}
