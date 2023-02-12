@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3243214532569120777}
   - component: {fileID: 1922454275668430764}
   - component: {fileID: 4416090268067248998}
+  - component: {fileID: 5176623032976417113}
   - component: {fileID: 8412405476384932178}
-  - component: {fileID: 5666002505720777814}
   m_Layer: 0
   m_Name: Terrain Planting
   m_TagString: Mud
@@ -86,20 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8412405476384932178
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2758989975064844979}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.12228935, z: 1}
-  m_Center: {x: 0, y: 0.062279325, z: -8.8504244e-16}
---- !u!114 &5666002505720777814
+--- !u!114 &5176623032976417113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,6 +101,34 @@ MonoBehaviour:
   panelMission: {fileID: 0}
   itemNeededImage: {fileID: 0}
   itemNeededID: 0
+  newItemNeededID: 0
+  newImageItem: {fileID: 21300000, guid: f0cef6e527ed7cf40bed84600ac8a4e8, type: 3}
+  groundMaterialStateFirts: {fileID: 2100000, guid: cdd18e56a676b9341aa6ea7abfe9575b,
+    type: 2}
+  groundMaterialStateSecond: {fileID: 2100000, guid: 8fe0eec196e04ba488c5724d1c83f448,
+    type: 2}
+  groundMaterialStateThird: {fileID: 2100000, guid: 2360d423ad3ace447949084b358bec05,
+    type: 2}
+  groundMaterialStateFourth: {fileID: 2100000, guid: 2323dced51135df4a948c157778255c6,
+    type: 2}
+  groundMaterialStateFifth: {fileID: 2100000, guid: 744305131628dbb43874db81f67fe041,
+    type: 2}
+  groundPlanting: {fileID: 2758989975064844979}
+  panelActivated: 0
+  myPlants: {fileID: 8114927272365712381}
+--- !u!65 &8412405476384932178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2758989975064844979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.101249, z: 1}
+  m_Center: {x: 0, y: 0.551759, z: 1.586394e-15}
 --- !u!1001 &6537564950580388142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,11 +221,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8944882062738107770, guid: ce9a51e5ee92c0541adc35c05d794c91, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce9a51e5ee92c0541adc35c05d794c91, type: 3}
 --- !u!4 &7265527966251432521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4498620624280116071, guid: ce9a51e5ee92c0541adc35c05d794c91,
+    type: 3}
+  m_PrefabInstance: {fileID: 6537564950580388142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8114927272365712381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3036582780724019923, guid: ce9a51e5ee92c0541adc35c05d794c91,
     type: 3}
   m_PrefabInstance: {fileID: 6537564950580388142}
   m_PrefabAsset: {fileID: 0}

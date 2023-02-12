@@ -18,7 +18,11 @@ public class Game_Manager : MonoBehaviour
 
     public GameObject[] toolHand;
     public Animator characterAnimtor;
-    public AnimationClip[] animationTools;
+
+    public GameObject spriteCloud;
+    public GameObject myMissionActual;
+    public Sprite[] imagenMissionCloud;
+
     //public Item addItem_01; 
     private void Awake()
     {
@@ -41,38 +45,22 @@ public class Game_Manager : MonoBehaviour
             toolHand[i].SetActive(false);
         }
 
+        spriteCloud.SetActive(true);
+        myMissionActual.GetComponent<SpriteRenderer>().sprite = imagenMissionCloud[0];
+        characterAnimtor.GetComponent<Animator>().SetBool("Move", true);
+        toolHand[0].SetActive(false);
+        toolHand[1].SetActive(false);
+        toolHand[2].SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-       /* if (Input.GetKeyDown(KeyCode.M)) {
-            AddItem(addItem_01);
-        }*/
-
+       
     }
 
     public void DisplayItems() {
-        #region
-       /* for (int i = 0; i < items.Count; i++) {
-            
-            //Update slots Items image
-            slots[i].transform.GetChild(2).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            slots[i].transform.GetChild(2).GetComponent<Image>().sprite = items[i].itemSprite;
-
-            //Update slots Count text
-            slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().color = new Color(1, 1, 1, 1);
-            slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().text = itemsNumbers[i].ToString();
-
-            //Update Close / Throw button
-            slots[i].transform.GetChild(3).gameObject.SetActive(true);
-
-            //Up;pas slots Stickers
-            slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            
-        }*/
-        #endregion
-
+       
         //we ignore the fact
         for (int i = 0; i < slots.Length; i++) {
             if (i < items.Count)
@@ -87,10 +75,7 @@ public class Game_Manager : MonoBehaviour
                     slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().color = new Color(1, 1, 1, 0);
                     slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().text = null;
 
-                    //Update Close / Throw button
-                    //  slots[i].transform.GetChild(3).gameObject.SetActive(false);
-
-                    //Up;pas slots Stickers
+                   //Update slots Stickers
                     slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 0);
                 }
                 else {
@@ -102,10 +87,7 @@ public class Game_Manager : MonoBehaviour
                     slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().color = new Color(1, 1, 1, 1);
                     slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().text = itemsNumbers[i].ToString();
 
-                    //Update Close / Throw button
-                    // slots[i].transform.GetChild(3).gameObject.SetActive(true);
-
-                    //Up;pas slots Stickers
+                    //Update slots Stickers
                     slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
                 }
                
@@ -179,6 +161,13 @@ public class Game_Manager : MonoBehaviour
         DisplayItems();
     }
 
+    public int FindNumberOfXItem(int idItemToFind)
+    {
+
+        
+        return itemsNumbers[idItemToFind];
+        
+    }
 
     public bool FindItemID(int idItemSearch) {
         bool result = false;
@@ -189,6 +178,8 @@ public class Game_Manager : MonoBehaviour
             {
                 if (items[i].itemID == idItemSearch)
                 {
+                  
+
                     result = true;
 
                 }

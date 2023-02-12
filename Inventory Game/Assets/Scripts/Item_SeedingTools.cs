@@ -15,8 +15,27 @@ public class Item_SeedingTools : MonoBehaviour
             {
                 Destroy(gameObject);
                 Game_Manager.instance.AddItem(itemData);
+                if (itemData.itemID == 0)
+                {
+                    Game_Manager.instance.toolHand[0].SetActive(true);
+                    Game_Manager.instance.toolHand[1].SetActive(false);
+                    Game_Manager.instance.toolHand[2].SetActive(false);
+                }
+                if (itemData.itemID == 1)
+                {
+                    Game_Manager.instance.toolHand[0].SetActive(false);
+                    Game_Manager.instance.toolHand[1].SetActive(true);
+                    Game_Manager.instance.toolHand[2].SetActive(false);
+                }
+                if (itemData.itemID == 2)
+                {
+                    Game_Manager.instance.toolHand[0].SetActive(false);
+                    Game_Manager.instance.toolHand[1].SetActive(false);
+                    Game_Manager.instance.toolHand[2].SetActive(true);
+                }
             }
-            else {
+            else
+            {
                 Debug.Log("You can not pick up any items now, your inventory is full");
             }
         }
