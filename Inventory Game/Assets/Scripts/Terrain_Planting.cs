@@ -96,29 +96,7 @@ public class Terrain_Planting : MonoBehaviour
             }
             else {
 
-               /*
-                if (newItemNeededID == 1)
-                {
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Idle", false);
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Move", true);
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Dig", false);
-                    groundPlanting.GetComponent<Renderer>().material = groundMaterialStateSecond;
-                }
-                if (newItemNeededID == 2)
-                {
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Idle", false);
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Move", true);
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Dig", false);
-                    groundPlanting.GetComponent<Renderer>().material = groundMaterialStateThird;
-                }
-                if (newItemNeededID == 3)
-                {
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Idle", false);
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Move", false);
-                    Game_Manager.instance.characterAnimtor.GetComponent<Animator>().SetBool("Dig", true);
-                    groundPlanting.GetComponent<Renderer>().material = groundMaterialStateFourth;
-
-                }*/
+              
                 //after doing the animation is that the counter is increased
                 newItemNeededID++;
             }

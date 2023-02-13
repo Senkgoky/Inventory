@@ -22,6 +22,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject spriteCloud;
     public GameObject myMissionActual;
     public Sprite[] imagenMissionCloud;
+    public GameObject vegetableItem;
 
     //public Item addItem_01; 
     private void Awake()
@@ -51,6 +52,7 @@ public class Game_Manager : MonoBehaviour
         toolHand[0].SetActive(false);
         toolHand[1].SetActive(false);
         toolHand[2].SetActive(false);
+        vegetableItem.SetActive(false);
     }
 
     // Update is called once per frame
@@ -72,7 +74,7 @@ public class Game_Manager : MonoBehaviour
                     slots[i].transform.GetChild(2).GetComponent<Image>().sprite = null;
 
                     //Update slots Count text
-                    slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().color = new Color(1, 1, 1, 0);
+                    slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().color = new Color(0, 0, 0, 0);
                     slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().text = null;
 
                    //Update slots Stickers
@@ -84,7 +86,7 @@ public class Game_Manager : MonoBehaviour
                     slots[i].transform.GetChild(2).GetComponent<Image>().sprite = items[i].itemSprite;
 
                     //Update slots Count text
-                    slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().color = new Color(1, 1, 1, 1);
+                    slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().color = new Color(0, 0, 0, 1);
                     slots[i].transform.GetChild(1).GetComponent<TMPro.TMP_Text>().text = itemsNumbers[i].ToString();
 
                     //Update slots Stickers

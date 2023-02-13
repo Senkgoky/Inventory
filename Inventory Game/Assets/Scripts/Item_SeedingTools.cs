@@ -20,18 +20,28 @@ public class Item_SeedingTools : MonoBehaviour
                     Game_Manager.instance.toolHand[0].SetActive(true);
                     Game_Manager.instance.toolHand[1].SetActive(false);
                     Game_Manager.instance.toolHand[2].SetActive(false);
+                    Game_Manager.instance.vegetableItem.SetActive(false);
                 }
                 if (itemData.itemID == 1)
                 {
                     Game_Manager.instance.toolHand[0].SetActive(false);
                     Game_Manager.instance.toolHand[1].SetActive(true);
                     Game_Manager.instance.toolHand[2].SetActive(false);
+                    Game_Manager.instance.vegetableItem.SetActive(false);
                 }
                 if (itemData.itemID == 2)
                 {
                     Game_Manager.instance.toolHand[0].SetActive(false);
                     Game_Manager.instance.toolHand[1].SetActive(false);
                     Game_Manager.instance.toolHand[2].SetActive(true);
+                    Game_Manager.instance.vegetableItem.SetActive(false);
+                }
+                if (itemData.itemID == 3)
+                {
+                    Game_Manager.instance.toolHand[0].SetActive(false);
+                    Game_Manager.instance.toolHand[1].SetActive(false);
+                    Game_Manager.instance.toolHand[2].SetActive(false);
+                    Game_Manager.instance.vegetableItem.SetActive(true);
                 }
             }
             else
