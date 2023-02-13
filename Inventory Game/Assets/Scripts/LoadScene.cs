@@ -20,16 +20,19 @@ public class LoadScene : MonoBehaviour
 
     public void GameBasic() {
         SceneManager.LoadScene("Basic", LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
     public void GamePrincipal() {
         SceneManager.LoadScene("Principal", LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
 
     public void GameMenu()
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+      
     }
     public void ExistGame() {
         Application.Quit();
